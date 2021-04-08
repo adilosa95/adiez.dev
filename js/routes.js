@@ -1,4 +1,5 @@
- const PATHS = {
+
+const routes = {
     home:{
         path: "/",
         template:`<h1>Estas en el home</h1>`,
@@ -7,8 +8,6 @@
         path: "/links",
         template:`<h1>Estas en links</h1>`,
     },
-    error:{
-        path: "*",
-        template:`<h1>Estas en links</h1>`,
-    }
 }
+
+export default routes
