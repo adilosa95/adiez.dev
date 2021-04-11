@@ -1,11 +1,9 @@
 
 const routes = {
-    home:{
-        path: "/",
+    "/":{
         template:`<h1>Estas en el home</h1>`,
     },
-    links:{
-        path: "/links",
+    "/links":{
         template:`<h1>Estas en links</h1>`,
     },
 }

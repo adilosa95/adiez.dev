@@ -1,29 +1,17 @@
 
-// const init = () =>{
-//     const { location: { pathname = "/"} } = window
-//     const URL = pathname === "/" ? "home" : pathname.replace("/" , "")
-
 import parseRequestURL from "../utils/parseRequestURL.js";
 import routes from "./routes.js";
 
-//    load( URL )
-// }
-// const load = ( page = "home") =>{
-
-//     const {path , template} = PATHS[page] || PATHS['error']
-//     const container = document.querySelector('#content')
-//     container.innerHTML = template
-//     window.history.pushState({},"done",path)
-// }
-// init()
-
-
 const routers = () =>{
  
-    const content = document.querySelector('.content')
+    let page = routes[parseRequestURL()] ? routes[parseRequestURL()].template : routes['/'].template 
 
-    let page = routes[parseRequestURL()] ? routes[parseRequestURL()].template : 'Hola'
-    
+    const content = document.querySelector('.content')
+    setTimeout(()=>{
+        // uses HTML5 history API to manipulate the location bar
+        history.pushState(null, null, window.location.href.split('#')[0]);
+    }, 5); // 5
+
     content.innerHTML = page
 
 }
