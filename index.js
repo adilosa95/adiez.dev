@@ -1,5 +1,5 @@
 import {routes} from './js/routes.js'
-import { menu } from './js/menu.js'
+import { menu } from './pages/menu.js'
 
 
 //Cargamos lo primero el menu
@@ -21,7 +21,7 @@ const  contactDiv = document.querySelector('.contact')
 
 //Renderizar segun el cambio del path name
 onpopstate = () =>{
-    
+    console.log('entra');
     menuhide(location.pathname)
 
     contentDiv.innerHTML = routes[location.pathname];
