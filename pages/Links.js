@@ -1,4 +1,4 @@
-let links = `
+export const links = `
   <section class="contact">
     There are risks and costs to action.
     But they are far less than the long

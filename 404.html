@@ -4,8 +4,11 @@
   <head>
     <meta charset="utf-8" />
     <link rel=canonical href="./">
-    <script type="text/javascript" src="./redirect.js"></script>
-    <script>redirect404()</script>
+    <script type="module" src="./js/redirect.js"></script>
+    <script>
+    import {redirect404} from './js/redirect.js'
+      redirect404()
+    </script>
   </head>
 
   <body>

@@ -1,6 +1,5 @@
 let redirect404 = () => {
   var segmentCount = 0;
-  var location = window.location;
   location.replace(
     location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') +
     location.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' +
@@ -11,7 +10,6 @@ let redirect404 = () => {
 }
 
 let recieveRedirect = () => {
-  (function(location) {
     if (location.search) {
       var q = {};
       location.search.slice(1).split('&').forEach(function(v) {
@@ -26,5 +24,6 @@ let recieveRedirect = () => {
         );
       }
     }
-  }(window.location));
-}
+  }
+
+  export {recieveRedirect , redirect404}

@@ -1,12 +1,10 @@
-//import recieveRedirectrecieveRedirect from './js/routers.js'
+import {recieveRedirect} from './js/redirect.js'
+import {routes} from './js/routes.js'
 
-let routes = {
-    '/': 'Hola',
-    '/links': 'portfolio',
-  };
+//Main
+const contentDiv = document.querySelector('.content')
 
-
-let contentDiv = document.querySelector('.content')
+const  contactDiv = document.querySelector('.contact')
 
 window.onpopstate = () =>{
     contentDiv.innerHTML = routes[window.location.pathname];
@@ -17,12 +15,13 @@ const onClickItem = (pathName) =>{
     history.pushState({} ,pathName, location.origin + pathName)
     contentDiv.innerHTML = routes[pathName]
 }
-
+//
+//El path cargado = al elemento cargado
 contentDiv.innerHTML = routes[window.location.pathname];
 
-// //Listen on hash change:
-// window.addEventListener('hashchange', recieveRedirectrecieveRedirect);
-
-// // Listen on page load:
-// window.addEventListener('load',recieveRedirectrecieveRedirect );
-
+//
+//Inicializamos el redirect
+recieveRedirect()
+//
+//Oncliks del menu
+contactDiv.addEventListener('click' , ()=> {onClickItem('/links') ; return false})
