@@ -12,6 +12,7 @@ function menuhide(path){
     path === route ?    nav.innerHTML = '' : nav.innerHTML = menu;
 
 }
+menuhide(location.pathname)
 
 //Main
 const contentDiv = document.querySelector('.content')
@@ -19,10 +20,8 @@ const contentDiv = document.querySelector('.content')
 //Otros selecotres ()
 const  contactDiv = document.querySelector('.contact')
 
-//Renderizar segun el cambio del path name
+//Historial Renderizar segun el cambio del path name
 onpopstate = () =>{
-    console.log('entra');
-    menuhide(location.pathname)
 
     contentDiv.innerHTML = routes[location.pathname];
 
