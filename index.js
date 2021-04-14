@@ -1,7 +1,7 @@
 import {routes} from './js/routes.js'
 import { menu } from './pages/menu.js'
 
-
+//-------------Menu-----------------
 //Cargamos lo primero el menu
 const nav = document.querySelector('.navmenu')
 nav.innerHTML = menu;
@@ -12,28 +12,29 @@ function menuhide(path){
     path === route ?    nav.innerHTML = '' : nav.innerHTML = menu;
 
 }
-menuhide(location.pathname)
-
-//Main
+ menuhide(location.pathname)
+//
+//------------Main-------------------
 const contentDiv = document.querySelector('.content')
 
 //Otros selecotres ()
 const  contactDiv = document.querySelector('.contact')
 
 //Historial Renderizar segun el cambio del path name
-onpopstate = () =>{
-
+window.onpopstate = () =>{
     contentDiv.innerHTML = routes[location.pathname];
 
+    //menuhide(path)
 }
 
 //onclick de items para navegar
 const onClickItem = (pathName) =>{
-    
-    menuhide(pathName)
 
     history.pushState({} ,pathName, location.origin + pathName)
     contentDiv.innerHTML = routes[pathName] 
+
+    menuhide(pathName)
+
 }
 
 
