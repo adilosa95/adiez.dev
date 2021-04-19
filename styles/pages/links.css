@@ -14,8 +14,7 @@
 .link-card{
     padding: 10px;
 
-    width: 400px;
-
+    width: 75vw;
     cursor: pointer;
     
     border: solid 5px rgb(40, 224, 224);
