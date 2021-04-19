@@ -12,6 +12,7 @@ function menuhide(path){
     path === route ?  nav.innerHTML = '' : nav.innerHTML = menu;
 
 }
+menuhide(location.pathname)
 //
 //------------Main-------------------
 const contentDiv = document.querySelector('.content')
@@ -21,17 +22,12 @@ const  contactDiv = document.querySelector('.contact')
 
 //Historial Renderizar segun el cambio del path name
 window.onpopstate = () =>{
-
-    menuhide(location.pathname)
-    console.log('Entra');
     contentDiv.innerHTML = routes[location.pathname];
 
 }
-
 //onclick de items para navegar
 const onClickItem = (pathName) =>{
-
-    history.pushState({} ,pathName, location.origin + pathName)
+        history.pushState({} ,pathName, location.origin + pathName)
     contentDiv.innerHTML = routes[pathName] 
 
 }

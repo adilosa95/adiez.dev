@@ -4,14 +4,12 @@ const links =[
     nombre: 'Visita mi web',
     icon: `https://img.icons8.com/fluent/60/000000/web-design.png` ,
     link: 'https://github.com/adilosa95',
-    color: ''
   },
   {
     id: 1,
     nombre: 'Sígueme en Github',
     icon: `https://img.icons8.com/fluent/60/000000/github.svg` ,
     link: 'https://github.com/adilosa95',
-    color: ''
   },
   {
     id: 2,
