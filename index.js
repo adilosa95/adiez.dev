@@ -9,7 +9,7 @@ nav.innerHTML = menu;
 //Función para mostrar o no el menu
 function menuhide(path){
     const route = '/links'
-    path === route ?    nav.innerHTML = '' : nav.innerHTML = menu;
+    path === route ?  nav.innerHTML = '' : nav.innerHTML = menu;
 
 }
 //
@@ -23,7 +23,7 @@ const  contactDiv = document.querySelector('.contact')
 window.onpopstate = () =>{
     contentDiv.innerHTML = routes[location.pathname];
 
-    menuhide(path)
+    menuhide(location.pathname)
 }
 
 //onclick de items para navegar
