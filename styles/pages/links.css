@@ -1,0 +1,34 @@
+/*Posiccion de todo el componente*/
+.links{
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+}
+/*Diseño imagen de perfil*/
+.profile-picture img{
+    border-radius: 100px;
+}
+/*Diseño de las tarjetas*/
+.link-card{
+    padding: 10px;
+
+    width: 400px;
+
+    cursor: pointer;
+    
+    border: solid 5px rgb(40, 224, 224);
+    border-radius: 10px;
+    margin-block-start: 10px;
+
+}
+.link-card img{
+    float: left;
+}
+.link-card p{
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 14pt;
+}

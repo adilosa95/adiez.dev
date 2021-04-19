@@ -12,7 +12,6 @@ function menuhide(path){
     path === route ?    nav.innerHTML = '' : nav.innerHTML = menu;
 
 }
- menuhide(location.pathname)
 //
 //------------Main-------------------
 const contentDiv = document.querySelector('.content')
@@ -24,7 +23,7 @@ const  contactDiv = document.querySelector('.contact')
 window.onpopstate = () =>{
     contentDiv.innerHTML = routes[location.pathname];
 
-    //menuhide(path)
+    menuhide(path)
 }
 
 //onclick de items para navegar
@@ -32,8 +31,6 @@ const onClickItem = (pathName) =>{
 
     history.pushState({} ,pathName, location.origin + pathName)
     contentDiv.innerHTML = routes[pathName] 
-
-    menuhide(pathName)
 
 }
 
