@@ -21,9 +21,11 @@ const  contactDiv = document.querySelector('.contact')
 
 //Historial Renderizar segun el cambio del path name
 window.onpopstate = () =>{
-    contentDiv.innerHTML = routes[location.pathname];
 
     menuhide(location.pathname)
+    console.log('Entra');
+    contentDiv.innerHTML = routes[location.pathname];
+
 }
 
 //onclick de items para navegar

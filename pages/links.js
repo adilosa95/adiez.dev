@@ -23,9 +23,11 @@ const links =[
 ]
 
 const card = (data)=>{
-  return `<div class="link-card" style="background-color: ${data.color};" >
-            <img src=${data.icon} alt=${data.nombre}/>
-            <p>${data.nombre}</p>
+  return `<div class="link-card">
+            <a href=${data.link}>
+              <img src=${data.icon} alt=${data.nombre}/>
+              <p>${data.nombre}</p>
+            </a>
           </div>`
 }
 
