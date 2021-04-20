@@ -3,27 +3,39 @@ const links =[
     id: 0,
     nombre: 'Visita mi web',
     icon: `https://img.icons8.com/fluent/60/000000/web-design.png` ,
-    link: 'https://github.com/adilosa95',
+    link: 'https://github.com/adilosa95'
   },
   {
     id: 1,
-    nombre: 'Sígueme en Github',
+    nombre: 'Github',
     icon: `https://img.icons8.com/fluent/60/000000/github.svg` ,
-    link: 'https://github.com/adilosa95',
+    link: 'https://github.com/adilosa95'
   },
   {
     id: 2,
-    nombre: 'Sígueme en Twitter',
+    nombre: 'Twitter',
     icon: `https://img.icons8.com/fluent/60/000000/twitter.svg` ,
-    link: 'https://twitter.com/adilosa95',
-    color: ''
+    link: 'https://twitter.com/adilosa95'
+  },
+  {
+    id: 3,
+    nombre: 'DEV.to',
+    icon: `https://cdn.worldvectorlogo.com/logos/devto.svg` ,
+    link: 'https://dev.to/adiezdev'
+  },
+  {
+    id: 3,
+    nombre: 'DEV.to',
+    icon: `https://cdn.worldvectorlogo.com/logos/devto.svg` ,
+    link: 'https://dev.to/adiezdev',
+    class: 'new-post'
   }
 ]
 
 const card = (data)=>{
-  return `<div class="link-card">
+  return `<div class="link-card ${ !data.class ? '' :data.class }">
             <a href=${data.link}>
-              <img src=${data.icon} alt=${data.nombre}/>
+              <img width="60px"  src=${data.icon} alt=${data.nombre}/>
               <p>${data.nombre}</p>
             </a>
           </div>`
@@ -31,10 +43,14 @@ const card = (data)=>{
 
 export const Links = `
   <div class="links">
-    <div class="profile-picture"><img src='https://github.com/adilosa95.png?size=200' alt="foto-de-perfil"/></div>
+    <div class="profile-picture"><img src='https://pbs.twimg.com/profile_images/1380936395875815426/dsNNOmWr_200x200.jpg' alt="foto-de-perfil"/></div>
+    <div class="profile-description">
+      <p class="profile-name">Alejandro Díez López</p>
+      <p>@adiezdev</p>
+    </div>
     <div class="social-networks"></div>
     <div class="links-cards">
-      ${links.map((link) => card(link)).join('')}
+      ${links.reverse().map((link) => card(link)).join('')}
     </div>
   </div>`;
 

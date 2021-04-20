@@ -10,11 +10,21 @@
 .profile-picture img{
     border-radius: 100px;
 }
+.profile-name {
+    font-weight: bold;
+}
+/*Diseño de la bio*/
+.profile-description{
+    text-align: center;
+}
 /*Diseño de las tarjetas*/
 .link-card{
+
     padding: 10px;
 
     width: 75vw;
+    max-width: 730px;
+
     cursor: pointer;
     
     border: solid 5px rgb(40, 224, 224);
@@ -26,8 +36,19 @@
     float: left;
 }
 .link-card p{
-
-    text-align: center;
     font-weight: bold;
     font-size: 14pt;
+    text-align: center;
+}
+/*new post*/
+.new-post{
+    animation: shake .8s infinite;
+}
+@keyframes shake {
+    0% { transform: skewX(-10deg); }
+    5% { transform: skewX(10deg); }
+    10% { transform: skewX(-10deg); }
+    15% { transform: skewX(10deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); }
 }
