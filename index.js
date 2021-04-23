@@ -17,9 +17,6 @@ menuhide(location.pathname)
 //------------Main-------------------
 const contentDiv = document.querySelector('.content')
 
-//Otros selecotres ()
-const  contactDiv = document.querySelector('.contact')
-
 //Historial Renderizar segun el cambio del path name
 window.onpopstate = () =>{
     contentDiv.innerHTML = routes[location.pathname];
@@ -35,7 +32,9 @@ const onClickItem = (pathName) =>{
 
 //El path cargado = al elemento cargado
 contentDiv.innerHTML = routes[location.pathname];
-
+//
+//
+//Otros selecotres ()
+const  contactDiv = document.querySelector('.contact')
 //Onclickers
 contactDiv.addEventListener('click' , ()=> {onClickItem('/links') ; return false})
-

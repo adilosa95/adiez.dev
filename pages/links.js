@@ -6,28 +6,34 @@ const links =[
     link: 'https://github.com/adilosa95'
   },
   {
-    id: 1,
-    nombre: 'Github',
-    icon: `https://img.icons8.com/fluent/60/000000/github.svg` ,
-    link: 'https://github.com/adilosa95'
-  },
-  {
     id: 2,
     nombre: 'Twitter',
     icon: `https://img.icons8.com/fluent/60/000000/twitter.svg` ,
     link: 'https://twitter.com/adilosa95'
   },
   {
-    id: 3,
+    id: 4,
     nombre: 'DEV.to',
     icon: `https://cdn.worldvectorlogo.com/logos/devto.svg` ,
     link: 'https://dev.to/adiezdev'
   },
   {
     id: 3,
-    nombre: 'DEV.to',
-    icon: `https://cdn.worldvectorlogo.com/logos/devto.svg` ,
-    link: 'https://dev.to/adiezdev',
+    nombre: 'Mi Kit',
+    icon: `https://img.icons8.com/color/48/000000/keyboard.png` ,
+    link: 'https://kit.co/adiezdev'
+  },
+  {
+    id: 1,
+    nombre: 'Github',
+    icon: `https://img.icons8.com/fluent/60/000000/github.svg` ,
+    link: 'https://github.com/adilosa95'
+  },
+  {
+    id: 5,
+    nombre: 'Instagram',
+    icon: `https://img.icons8.com/fluent/60/000000/instagram-new.svg` ,
+    link: 'https://instagram.com/adiezdev',
     class: 'new-post'
   }
 ]
