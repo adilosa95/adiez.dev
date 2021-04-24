@@ -24,10 +24,16 @@ const links =[
     link: 'https://kit.co/adiezdev'
   },
   {
+    id: 6,
+    nombre: 'Bitclout',
+    icon: `https://pbs.twimg.com/profile_images/1380219114107457540/jmdrmXzN.jpg` ,
+    link: 'https://bitclout.com/adiezdev',
+  },
+  {
     id: 1,
     nombre: 'Github',
     icon: `https://img.icons8.com/fluent/60/000000/github.svg` ,
-    link: 'https://github.com/adilosa95'
+    link: 'https://github.com/adiedev'
   },
   {
     id: 5,
